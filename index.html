@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shrija | Happy 17</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+  <!-- INTRO PAGE -->
+  <section id="introPage" class="page">
+    <p class="small">A special Gift for you</p>
+    <h1>Shrija</h1>
+    <p class="tagline">Happy 17th Birthday</p>
+    <button onclick="nextPage('poemPage')">Begin</button>
+  </section>
+
+  <!-- POEM PAGE -->
+  <section id="poemPage" class="page hidden">
+    <h1>For Shrija 💕</h1>
+    <div class="poem-container">
+    <p class="poem">
+      <!-- Paste your poem here -->
+For you, Shrija, on this special day,<br>
+I wish I could have been there in every way.<br>
+The moments we missed, the laughter we skipped,<br>
+I feel them now, in my heart, tightly gripped.<br>
+<br>
+I remember your smile, soft like the morning sun,<br>
+And how you wanted Henley tops for your day of fun.<br>
+I’m sorry I couldn’t see you wearing them bright,<br>
+Or hug you close and hold you through the night.<br>
+<br>
+I regret the times I wasn’t near,<br>
+When words went unspoken, and I couldn’t hear<br>
+The little things you wished for, the quiet hopes you hid,<br>
+All the tiny joys that life for you forbid.<br>
+<br>
+But today, my wish travels on the breeze,<br>
+To wrap around you, gently, with ease.<br>
+May laughter find you in every corner and lane,<br>
+And the warmth of love fall softly like rain.<br>
+<br>
+May your day be filled with colors of delight,<br>
+With hearts, with dreams, with moments bright.<br>
+May Henley tops hug you with comfort and grace,<br>
+And smiles bloom freely on your beautiful face.<br>
+<br>
+Though absence stings, my heart is here,<br>
+Sending whispers of love only you can hear.<br>
+So dance, dear Shrija, let the world spin anew,<br>
+For today is yours, and happiness finds you too.<br>
+<br>
+Happy 17th, my light, my star, my friend,<br>
+May joy be yours now, and hope never end.<br>
+    </p>
+    </div>
+    <button onclick="nextPage('mainPage')">Continue →</button>
+  </section>
+
+  <!-- MAIN PAGE -->
+  <section id="mainPage" class="page hidden">
+    <div class="poster">
+      <h2>Ms. Universe</h2>
+      <h1>Ms. Shrija Chakraborty</h1>
+      <p>Seventeen & Magical ✨</p>
+    </div>
+
+    <p class="dialogue">
+      “Some people don’t enter your life as chapters,
+      they become the story forever.”
+    </p>
+
+    <!-- GIFT -->
+    
+
+    <!-- MESSAGE -->
+    <div class="message hidden">
+      <p>
+        May this year give you reasons to smile louder,
+        dream bigger and shine brighter than ever. 
+        May you always receive the happiness that I wasn't
+        able to provide.
+      </p>
+
+      <!-- CAKE -->
+      <div class="cake" onclick="openGift()">🎂</div>
+      <p class="hint">Make a wish ✨ and Tap the Cake</p>
+
+      <!-- END -->
+      <div class="credits hidden">
+        <p>Stay Happy As Always</p>
+        <p>Thank you for making my life Beautiful, Shrija 🤍</p>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
