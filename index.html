@@ -1,114 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shrija | Happy 17</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  height:100vh;
+  overflow:hidden;
+  color:white;
+  background: linear-gradient(-45deg,#ff758c,#ff7eb3,#fad0c4,#ffc3a0);
+  background-size:400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* HEART BACKGROUND */
+.hearts{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+.heart{
+  position:absolute;
+  width:15px;
+  height:15px;
+  background:rgba(255,255,255,0.4);
+  transform:rotate(45deg);
+  animation: float 10s linear infinite;
+}
+
+.heart::before,
+.heart::after{
+  content:"";
+  position:absolute;
+  width:15px;
+  height:15px;
+  background:inherit;
+  border-radius:50%;
+}
+
+.heart::before{
+  top:-8px;
+  left:0;
+}
+
+.heart::after{
+  left:-8px;
+  top:0;
+}
+
+@keyframes float{
+  0%{transform:translateY(100vh) rotate(45deg); opacity:0;}
+  20%{opacity:1;}
+  100%{transform:translateY(-10vh) rotate(45deg); opacity:0;}
+}
+
+/* PAGES */
+.page{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  opacity:0;
+  transform:scale(0.95);
+  transition:0.6s ease;
+}
+
+.page.active{
+  opacity:1;
+  transform:scale(1);
+  z-index:1;
+}
+
+/* BUTTON */
+button{
+  margin-top:30px;
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+  background:white;
+  color:#ff4f7a;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* CAKE */
+.cake{
+  width:200px;
+  height:130px;
+  background:#7a3e1d;
+  border-radius:15px;
+  position:relative;
+  margin:40px 0;
+}
+
+.candle{
+  width:12px;
+  height:45px;
+  background:white;
+  position:absolute;
+  top:-45px;
+  left:50%;
+  transform:translateX(-50%);
+  border-radius:5px;
+}
+
+.flame{
+  width:16px;
+  height:30px;
+  background:gold;
+  border-radius:50%;
+  position:absolute;
+  top:-24px;
+  left:-2px;
+}
+
+@keyframes flicker{
+  from{transform:scale(1);}
+  to{transform:scale(1.2);}
+}
+
+/* MESSAGE */
+.message{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  padding:30px;
+  border-radius:20px;
+  max-width:600px;
+  line-height:1.6;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* FIREWORKS */
+canvas{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+</style>
 </head>
+
 <body>
 
-<!-- AUDIO -->
-<audio id="bgMusic" loop autoplay>
-<<<<<<< HEAD
-  <source src="Jiya Tui Chara  Biye Bibhrat  Arijit Singh  Parambrata C, Abir Chatterjee, Lahoma B  Ranajoy B.mp3" type="audio/mpeg">
-=======
-  <source src="song.mp3" type="audio/mpeg">
->>>>>>> b2eed33fcba2d8fe5d5cbb2154367c386bb060b5
-</audio>
+<div class="hearts" id="hearts"></div>
 
-<div class="container">
-
-  <!-- INTRO PAGE -->
-  <section id="introPage" class="page">
-    <p class="small">A special Gift for you</p>
-    <h1>Shrija</h1>
-    <p class="tagline">Happy 17th Birthday</p>
-    <button onclick="nextPage('poemPage')">Begin</button>
-  </section>
-
-  <!-- POEM PAGE -->
-  <section id="poemPage" class="page hidden">
-    <h1>For Shrija 💕</h1>
-    <div class="poem-container">
-    <p class="poem">
-      <!-- Paste your poem here -->
-For you, Shrija, on this special day,<br>
-I wish I could have been there in every way.<br>
-The moments we missed, the laughter we skipped,<br>
-I feel them now, in my heart, tightly gripped.<br>
-<br>
-I remember your smile, soft like the morning sun,<br>
-And how you wanted Henley tops for your day of fun.<br>
-I’m sorry I couldn’t see you wearing them bright,<br>
-Or hug you close and hold you through the night.<br>
-<br>
-I regret the times I wasn’t near,<br>
-When words went unspoken, and I couldn’t hear<br>
-The little things you wished for, the quiet hopes you hid,<br>
-All the tiny joys that life for you forbid.<br>
-<br>
-But today, my wish travels on the breeze,<br>
-To wrap around you, gently, with ease.<br>
-May laughter find you in every corner and lane,<br>
-And the warmth of love fall softly like rain.<br>
-<br>
-May your day be filled with colors of delight,<br>
-With hearts, with dreams, with moments bright.<br>
-May Henley tops hug you with comfort and grace,<br>
-And smiles bloom freely on your beautiful face.<br>
-<br>
-Though absence stings, my heart is here,<br>
-Sending whispers of love only you can hear.<br>
-So dance, dear Shrija, let the world spin anew,<br>
-For today is yours, and happiness finds you too.<br>
-<br>
-Happy 17th, my light, my star, my friend,<br>
-May joy be yours now, and hope never end.<br>
-    </p>
-    </div>
-    <button onclick="nextPage('mainPage')">Continue →</button>
-  </section>
-
-  <!-- MAIN PAGE -->
-  <section id="mainPage" class="page hidden">
-    <div class="poster">
-      <h2>Ms. Universe</h2>
-      <h1>Ms. Shrija Chakraborty</h1>
-      <p>Seventeen & Magical ✨</p>
-    </div>
-
-    <p class="dialogue">
-      “Some people don’t enter your life as chapters,
-      they become the story forever.”
-    </p>
-
-    <!-- GIFT -->
-    
-
-    <!-- MESSAGE -->
-    <div class="message hidden">
-      <p>
-        May this year give you reasons to smile louder,
-        dream bigger and shine brighter than ever. 
-        May you always receive the happiness that I wasn't
-        able to provide.
-      </p>
-
-      <!-- CAKE -->
-      <div class="cake" onclick="openGift()">🎂</div>
-      <p class="hint">Make a wish ✨ and Tap the Cake</p>
-
-      <!-- END -->
-      <div class="credits hidden">
-        <p>Stay Happy As Always</p>
-        <p>Thank you for making my life Beautiful, Shrija 🤍</p>
-      </div>
-
-    </div>
-  </section>
+<!-- PAGE 1 -->
+<div class="page active">
+  <h1>Happy Birthday, Shrija ❤️</h1>
+  <div id = "flame"><h1>Tap Me</h1></div>
+  
+  <button onclick="next()">Next ➡️</button>
 </div>
 
-<script src="script.js"></script>
+<!-- PAGE 2 -->
+<div class="page">
+  <h1>Many Many Happy Returns of the Day.<br> May Your life be as bright and colorful as you are.</h1>
+  <canvas id="fireworks"></canvas>
+  <button onclick="next()">Next ➡️</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <h1>For You 💌</h1>
+  <div class="message">
+    Today is your birthday, 23rd February, and it has been 35 days since 19th January—thirty-five quiet days of learning how to exist without the version of life where you were beside me. I don’t know if you will ever come back, and I promise myself I will never ask, never force, never pull at your freedom. Love should never feel like a cage. Still, I want you to know this much, calmly and without expectation: all the love I have learned to hold, I hold for you. I don’t think I will fall in love again ,not out of sadness, but out of truth. Some loves don’t end; they simply become silent, patient, and private. And today is not about my waiting or my wondering .... it’s about you. Your smile deserves a day untouched by heaviness, your laughter deserves to be louder than memory, and your life deserves happiness in whatever form it chooses to arrive.<br>
+    I learned how to love,<br>
+    and didn’t learn how to let it go.<br>
+    I learned how to stay,<br>
+    even when it was time to walk gently away.<br>
+    I don’t call this pain<br>
+    but just a quiet loyalty....<br>
+    to something that once felt like home.<br>
+    I just want to say I’m sorry : for the moments where I may have hurt you without meaning to, for the times I didn’t understand as quickly as I should have, and for any weight my presence may have added to your heart. This isn’t an apology looking for closure or forgiveness; it’s simply an acknowledgment. I know we both did the best we could with what we knew at the time. There’s no blame here, only love and lessons, and a quiet respect for what we shared. I hope, more than anything, that when you think back, you remember the care more than the confusion, and the sincerity more than the mistakes.<br>
+    <br>I hope the world is kind to you. I hope you are surrounded by warmth, by people who make you feel seen, by moments that feel light and effortless. Wherever life takes you, and whoever you become, a part of my heart will always wish you joy .. quietly, sincerely, and without asking for anything in return.
+    <br>
+    I hope your dreams feel closer today, and your burdens feel lighter, even if just for a while. I hope you laugh without remembering what was lost, and smile without carrying yesterday into the moment. May this year give you growth without pain, strength without struggle, and happiness that doesn’t need explanation. If life ever pauses long enough for reflection, I hope it reminds you of how deeply you were cared for, not as an obligation, but as a choice made with a full heart.
+    <br>
+    And if my love has to live only as a memory, then let it be a gentle one, something that never weighs you down, something that only ever wishes you well. On your birthday, and on every day that follows, may you walk forward freely, wrapped in peace, with no part of you owing anything back to the past. 🌷<br>
+
+
+  </div>
+  <button onclick="back()">⬅️ Back</button>
+</div>
+
+<script>
+/* PAGE CONTROL */
+const pages = document.querySelectorAll('.page');
+let i = 0;
+
+function next(){
+  pages[i].classList.remove('active');
+  i++;
+  pages[i].classList.add('active');
+}
+
+function back(){
+  pages[i].classList.remove('active');
+  i = 0;
+  pages[i].classList.add('active');
+}
+
+/* HEARTS */
+const heartBox = document.getElementById("hearts");
+for(let i=0;i<30;i++){
+  const h = document.createElement("div");
+  h.className="heart";
+  h.style.left=Math.random()*100+"%";
+  h.style.animationDuration=5+Math.random()*8+"s";
+  h.style.opacity=Math.random();
+  heartBox.appendChild(h);
+}
+
+/* CANDLE */
+const flame = document.getElementById("flame");
+flame.onclick = () => {
+  alert("Shubho Jonmodin Bondhu ❤️");
+};
+
+
+</script>
+
 </body>
 </html>
